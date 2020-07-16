@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector and Pseudo Selectors</title>
+    <style>
+        /* .submit{
+            background-color: red;;
+        } */
+        /* Pseudo Selector */
+        input[type="submit"]{
+            background-color: blue;;
+        }
+        /* 가상 선택자, 태그 안에 속성과 값을 불러 선택하는 방법 */
+        input[type="password"]{
+            background-color: red;
+        }
+        input{
+            border:1px solid gray;
+        }
+        .box{
+            background-color: green;
+            display: block;
+            height: 100px;
+            border: 3px soild black;
+        }
+        /* 가상 선택자, 같은 element 중 순서를 부여해서 선택하는 방법 */
+        .box:last-child{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box">
+            <input type="password">
+            <input type="submit" class="submit">
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+직접적인 class, id를 입력하는 것은 문제가 되지 않으나, 팀으로 함께 일할 떄 효율적이지 못 함
+-> 가상 선택자를 통해서 해결할 수 있음
+예를 들어 .submit에 css효과를 주지 않고,
+input[type="sbumit"]{
+    color:red;
+}
+똑같은 효과가 일어남. 즉, 팀으로 일할 때 하나하나 찾아보지 않아도 되서 효율적임
+
+Pseudo Selector
+1) element 중 순서를 부여해서 선택하는 방법
+.class: last-child / first-child / nth-child(순서) / 숫자n (배수)
+
++ 형제 => input + .box
+> 직계 => input > .box - 손자랑 직계랑 다른 의미
+
+
+
+ -->

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 400%;
+            background-color: red;
+        }
+        /* 
+        Position Fixed
+        #boxOne{
+            height: 300px;
+            width: 300px;
+            background-color: yellow;
+            position: static;
+        }
+        #boxTwo{
+            height: 300px;
+            width: 100%;
+            background-color: green;
+            position: fixed;
+            bottom: 30%;
+            right: 0;
+
+        }   */
+
+        .abs-box{
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            position: relative;
+        }
+        .abs-child{
+            width:100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Position Pixed
+        <div id="boxOne">
+        <div class="box-child"></div>
+    </div>
+    <div id="boxTwo">
+        <div class="box-child"></div>
+    </div> -->
+
+    <div class="abs-box">
+        <div class="abs-child"></div>
+    </div>
+
+</body>
+</html>
+
+<!-- 
+body, html에 height 100%, padding 0, margin 0을 주는 이유는 브라우저가 갖고 있는 디폴트 값을 상쇄시키기 위함
+
+    Position
+static - basic 그 해당 위치에 있을 것
+fixed - 해당 자리에 고정 -> 스크롤해도 고정되어 있음
+absolute - fixed랑 비슷하지만 고정되지는 않으므로 스크롤 해도 안 보임 
+-> html 상에서 해당 element와 관계가 있는 부모 element를 살펴보고 이에 상응해서 포지션이 결정됨.
+-> 부모 박스에 position: relative를 적어주면 부모 박스를 기준으로 상대적으로 absolute 포지션으로 움직임
+-> relative가 없으면 absolute는 html을 기준으로, 상대적으로 움직임
+relative - absolute의 움직임을 제어 (부모 태그에만 사용)
+- 자식 element를 제어할 수 있음
+
+    Position value
+top
+bottom
+left
+right
+ -->

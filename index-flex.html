@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+        .father-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            height: 100%;
+            flex-wrap: nowrap;
+
+        }
+        .box{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            margin-right: 7.3px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="father-box">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    Flex
+Flex를 적용할 때는 무조건 부모 박스에 적용해야 한다. -> 절대 자식 태그에 쓰지 않음
+
+위에서 자식 태그에게도 display: flex;를 준 이유는 숫자를 움직이기 위해서이다.
+
+부모 박스가 자식 박스를 움직인다. 그리고 박스가 그 안에 들어있는 컨텐츠를 움직인다. 왜냐하면 플렉스 박스이기 때문이다.
+
+
+-->

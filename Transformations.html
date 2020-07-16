@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            font-size: 200px;
+            /* transition: transform 5s ease-in-out; */
+            animation: 1.5s scaleAndRotateSquare ease-in-out;
+            /* 애니메이션 효과를 무제한으로 반복하고 싶다면 infinite를 작성해주면 됨 */
+            /* animation: 6s scaleAndRotateSquare2 ease-in-out; */
+
+        }
+        /* .box:hover{
+            transform: rotate(1turn) scale(.5, .5);
+
+        } */
+
+        @keyframes scaleAndRotateSquare {
+            form{
+                transform:none;
+            }
+            to{
+                transform: rotate(1turn) scale(.5, .5);
+                color: blue;
+            }
+        }   
+
+/* 
+        @keyframes scaleAndRotateSquare2 {
+            0%{
+                transform:none;
+            }
+            50%{
+                transform: rotate(0.5turn) scale(.5, .5);
+                color: white;
+            }
+            100%{
+                transform: none;
+                color: blue;
+            }
+        }    */
+    </style>
+</head>
+<body>
+    <div class="box">김규</div>
+</body>
+</html>
+
+<!-- 
+    transfrom 관련 링크
+http://developer.mozilla.org/en-US/docs/Web/CSS/transform
+
+rotate() 단위: deg - 각도 / turn - 회전
+scale(x축, y축)
+ㄴ 효과를 동시에 주고 싶으면 띄어쓰면 됨 
+
+state 효과 없이 계속 transform 효과를 주고 싶다면 애니메이션을 생성하면 됨
+ㄴ 애니메이션 이름을 지어야 함
+
+    2스테이지 구성
+@keyframes 애니메이션 이름 {
+    form{
+
+    }
+    to{
+
+    }
+}
+ㄴ Form 아무것도 없는 상태에서 To 어떤 변화된 모습까지
+
+만약 여러가지 상태에서 변화를 주고 싶다면?
+ㄴ 스테이지 구성
+
+        @keyframes scaleAndRotateSquare2 {
+            0%{
+                transform:none;
+            }
+            50%{
+                transform: rotate(1turn) scale(.5, .5);
+                color: white;
+            }
+            100%{
+                transform: none;
+                color: blue;
+            }
+        }   
+0 ~ 100%의 구간을 통해 차례대로 효과를 줄 수 있음
+-->

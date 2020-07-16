@@ -7,20 +7,51 @@
     <meta name="author" content="Kim Kyu">
     <title>Welcome</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body, html{
+            padding: 0;
+            margin: 0;
+            background-color: green;
+        }
+        .box{
+            background-color: yellow;
+            width:50%;
+            height:50%;
+            margin: 200px 100px 50px 20px;
+        }
+        .inside-box{
+            background-color: blue;
+            width:50%;
+            height:50%;
+            border-width: 5px;
+            border-color: red;
+            border-style: solid;
+            /* border: 5px solid red; */
+        }
+    </style>
 </head>
 <body>
-    <header id="kimkyu" class="방이동">
+    <!-- <header id="kimkyu" class="방이동">
     <h1>My name is Kim Kyu</h1>
     </header>
 
-    <article>
+    <article> 
         <h4>My girl friend is dazerro</h4>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus repudiandae voluptates dicta excepturi ipsum nemo praesentium recusandae eos mollitia nulla iste, veritatis facere quisquam eum similique dolor in explicabo alias.
         <p>
             <a href="#">Fake Link</a>
         </p>
-    </article>
+    </article> -->
 
+    <!-- Box Model -->
+    <!-- <div class="box">Box
+        <div class="inside-box">Inside-Box</div>
+    </div> -->
+
+    <!-- Position -->
+    <div class="box">
+        <div class="box-child"></div>
+    </div>
 </body>
 </html>
 
@@ -46,5 +77,16 @@ Selector: 같은 태그라 할 지라도 이름을 지어주어야 개별로 명
 id - Only one -> 문단 또는 문맥을 나누는 곳에 사용
 class - group -> 각기 다른 태그에 같은 class값 적용 가능 - 대체로 많은 곳에 사용
 
+Bow Model
+margin -> 여백
+    border -> 선
+        padding -> 선과 컨텐츠의 사이 
+            content -> 컨텐츠 자체 크기
 
+padding의 value 단축키: 첫 번째 - 상,하 / 두 번째 - 좌, 우
+ex) padding: 10px 20px;
+- 4개 적용 순서 - 상 우 하 좌 (시계방향)
+
+border value: width style color;
+ex) border: 1px solid gray;
   -->

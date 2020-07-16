@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .box{
+            background-color: green;
+            color:white;
+            transition: all 0.5s ease-in-out;
+        }
+        .box:active{
+            background-color: red;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <span class="box">
+        Text
+    </span>
+</body>
+</html>
+
+<!-- 
+    Transition
+- 변형될 때 어떠한 애니메이션 효과가 더해지는 것
+
+transition: 효과를 줄 대상 시간 속성
+ㄴ transition은 어떤 state들(hover, active, focus, visited 등)이 바뀔 때 적용되는 것
+
+ease-in-out - 효과 그대로 다시 제자리로 돌아가는 효과
+ -->
